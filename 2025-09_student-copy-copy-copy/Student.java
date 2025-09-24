@@ -7,6 +7,20 @@ public class Student
 
     // Constructor
     public Student (String name, float kg, int cm, char gender) {
+        if (kg >625 || kg <3 ) {
+        throw new IllegalArgumentException("Ungültig");
+        
+    }
+    if (cm >272 || cm <30 ) {
+        throw new IllegalArgumentException("Ungültig");
+        
+    }
+    if (name.length()<3 || name.length()>50 ) {
+        throw new IllegalArgumentException("Ungültig");
+    
+        
+    }
+        
         this.setName(name);
         this.setKg(kg);
         this.setCm(cm);
@@ -77,6 +91,8 @@ public class Student
         }
         return "GondiBalsam";
     }
-
+    
+    
+     
 }
 
