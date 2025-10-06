@@ -15,7 +15,7 @@ public class Auto {
         setName("n/a");
         setEigengewicht(1300);
     }
-
+    
     public Auto(String name, int eigengewicht) {
         setName(name);
         setEigengewicht(eigengewicht);
@@ -39,11 +39,11 @@ public class Auto {
     }
 
     public void setEigengewicht(int eigengewicht) {
-        if ((eigengewicht >= 600) && (eigengewicht <= 3000)) {
+        if ((eigengewicht >= 600) && (eigengewicht <= 3000 )) {
             this.eigengewicht = eigengewicht;
         } else {
-            System.out.println("Fehler: kein gültiges Eigengewicht (600..3000)!");
-            this.eigengewicht = 1300;
+            throw new IllegalArgumentException("Fehler: kein gültiges Eigengewicht (600..3000)!");
+
         }
     }
 
