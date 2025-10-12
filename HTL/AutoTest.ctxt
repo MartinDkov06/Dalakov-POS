@@ -1,9 +1,11 @@
 #BlueJ class context
 comment0.target=AutoTest
 comment1.params=
-comment1.target=void\ testEinsteigen()
+comment1.target=void\ setup()
 comment2.params=
-comment2.target=void\ testGesamtGewicht_eigengewicht_FALSCH_5000kg()
+comment2.target=void\ testEinsteigen()
 comment3.params=
-comment3.target=void\ testGesamtGewicht_eigenwicht_ok_2999kg()
-numComments=4
+comment3.target=void\ testGesamtGewicht_eigengewicht_FALSCH_5000kg()
+comment4.params=
+comment4.target=void\ testGesamtGewicht_eigenwicht_ok_2999kg()
+numComments=5

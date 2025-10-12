@@ -51,6 +51,10 @@ public class Auto {
         // 1. Prüfung ob Referenz person nicht null
         if (person != null) 
         {
+            if (person == fahrer || person == beifahrer || person == rueckbank) {
+                throw new IllegalStateException ("Person sitzt schon drinnen!");
+            }
+            
             if (this.fahrer == null) {
 
                 this.fahrer = person; // this kann man hier weglassen

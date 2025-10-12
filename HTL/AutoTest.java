@@ -3,13 +3,26 @@ import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import static org.junit.Assert.assertEquals;
+import org.junit.jupiter.api.*;
 
 public class AutoTest
 {
-    @Test
-    public void testEinsteigen() {
+    private Auto BMW;
+    private Person JohnSmith;
+    
+    
+    @BeforeEach 
+    public void setup() {
         Auto BMW = new Auto("Galdon", 1250);
         Person JohnSmith = new Person("JohnSmith", 80f, 175, 'm');
+        System.out.println("Gagondi");
+    
+    
+    
+    }
+    
+    @Test
+    public void testEinsteigen() {
         assertNotNull(JohnSmith);
         BMW.einsteigen(JohnSmith);
         JohnSmith = null;
@@ -19,7 +32,7 @@ public class AutoTest
     @Test
     public void testGesamtGewicht_eigengewicht_FALSCH_5000kg() { 
         try {
-        Auto BMW = new Auto("Galdon", 1250);
+        
         
         assertEquals(1250, BMW.getEigengewicht());
         BMW.setEigengewicht(5000);
@@ -38,7 +51,7 @@ public class AutoTest
     @Test
     public void testGesamtGewicht_eigenwicht_ok_2999kg() { 
         try {
-        Auto BMW = new Auto("Galdon", 1250);
+        
         
         assertEquals(1250, BMW.getEigengewicht());
         BMW.setEigengewicht(2999);
@@ -53,4 +66,6 @@ public class AutoTest
     }
 
     }
+    
+    
 }
